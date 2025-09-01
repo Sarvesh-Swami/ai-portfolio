@@ -222,6 +222,9 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .app-card {
@@ -231,6 +234,9 @@ section {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Stronger shadow */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 
 .app-card:hover {
