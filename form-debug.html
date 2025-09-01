@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Test - Debug</title>
+</head>
+<body>
+    <h1>Form Debugging Info</h1>
+    
+    <h2>Current Form Issues - Troubleshooting Guide</h2>
+    
+    <h3>1. Check Netlify Form Detection:</h3>
+    <ul>
+        <li>Go to your Netlify dashboard</li>
+        <li>Click on your site</li>
+        <li>Go to "Forms" tab</li>
+        <li>Look for "contact" form - it should appear after deployment</li>
+    </ul>
+    
+    <h3>2. Test Form Submission:</h3>
+    <p>If form still doesn't work, try this minimal test form:</p>
+    
+    <form name="test-contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="test-contact" />
+        <p>
+            <label>Your Name: <input type="text" name="name" required /></label>
+        </p>
+        <p>
+            <label>Your Email: <input type="email" name="email" required /></label>
+        </p>
+        <p>
+            <label>Message: <textarea name="message" required></textarea></label>
+        </p>
+        <p>
+            <button type="submit">Send Test Message</button>
+        </p>
+    </form>
+    
+    <h3>3. Common Netlify Form Issues:</h3>
+    <ul>
+        <li><strong>Form not detected:</strong> Wait 5-10 minutes after deployment</li>
+        <li><strong>Still not working:</strong> Try redeploying the site</li>
+        <li><strong>404 on submission:</strong> Make sure thank-you.html exists in root</li>
+    </ul>
+    
+    <h3>4. Alternative: Remove Custom Thank You Page</h3>
+    <p>If issues persist, remove action="thank-you.html" from form - Netlify will show default success page</p>
+    
+    <a href="index.html">← Back to Portfolio</a>
+</body>
+</html>

@@ -269,8 +269,11 @@
             
             <div class="contact-form">
                 <h3>Send me a message</h3>
-                <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+                <form name="contact" method="POST" data-netlify="true" netlify data-netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
+                    <div style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </div>
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
